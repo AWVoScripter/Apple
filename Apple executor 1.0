@@ -1,0 +1,105 @@
+--imagine skidding a useless script, could never be me 😭🙏
+
+local ScreenGui = Instance.new("ScreenGui")
+local Apple = Instance.new("Frame")
+local execute = Instance.new("TextButton")
+local Clear = Instance.new("TextButton")
+local Editor = Instance.new("TextBox")
+local TextLabel = Instance.new("TextLabel")
+local imagineskiddingauselessscript = Instance.new("Frame")
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Apple.Name = "Apple"
+Apple.Parent = ScreenGui
+Apple.BackgroundColor3 = Color3.fromRGB(13, 13, 13)
+Apple.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Apple.BorderSizePixel = 0
+Apple.Position = UDim2.new(0.238095239, 0, 0.220149249, 0)
+Apple.Size = UDim2.new(0, 636, 0, 348)
+
+execute.Name = "execute"
+execute.Parent = Apple
+execute.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+execute.BorderColor3 = Color3.fromRGB(0, 0, 0)
+execute.BorderSizePixel = 0
+execute.Position = UDim2.new(0.0332829207, 0, 0.866242349, 0)
+execute.Size = UDim2.new(0, 82, 0, 37)
+execute.Font = Enum.Font.FredokaOne
+execute.Text = "Execute"
+execute.TextColor3 = Color3.fromRGB(255, 255, 255)
+execute.TextSize = 18.000
+
+Clear.Name = "Clear"
+Clear.Parent = Apple
+Clear.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Clear.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Clear.BorderSizePixel = 0
+Clear.Position = UDim2.new(0.181543127, 0, 0.86624217, 0)
+Clear.Size = UDim2.new(0, 94, 0, 37)
+Clear.Font = Enum.Font.FredokaOne
+Clear.Text = "Clear"
+Clear.TextColor3 = Color3.fromRGB(255, 255, 255)
+Clear.TextSize = 18.000
+
+Editor.Name = "Editor"
+Editor.Parent = Apple
+Editor.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Editor.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Editor.BorderSizePixel = 0
+Editor.Position = UDim2.new(0.0332829058, 0, 0.16831392, 0)
+Editor.Size = UDim2.new(0, 592, 0, 230)
+Editor.Font = Enum.Font.SourceSans
+Editor.Text = "print(\"I'll soon make this an actual executor lol\")"
+Editor.TextColor3 = Color3.fromRGB(255, 255, 255)
+Editor.TextSize = 16.000
+Editor.TextXAlignment = Enum.TextXAlignment.Left
+Editor.TextYAlignment = Enum.TextYAlignment.Top
+
+TextLabel.Parent = Apple
+TextLabel.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0, 0, 0, 1)
+TextLabel.Size = UDim2.new(0, 636, 0, 42)
+TextLabel.Font = Enum.Font.LuckiestGuy
+TextLabel.Text = "Apple Executor beta"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 30.000
+
+imagineskiddingauselessscript.Name = "imagineskiddingauselessscript"
+imagineskiddingauselessscript.Parent = Apple
+imagineskiddingauselessscript.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+imagineskiddingauselessscript.BorderColor3 = Color3.fromRGB(0, 0, 0)
+imagineskiddingauselessscript.BorderSizePixel = 0
+imagineskiddingauselessscript.Position = UDim2.new(0.0533049032, 0, 0.17412141, 0)
+
+local function CMPQSO_fake_script() -- execute.LocalScript 
+	local script = Instance.new('LocalScript', execute)
+
+	local Execute = script.Parent.Parent.execute
+	local Editor = script.Parent.Parent.Editor
+	local skidlol = script.Parent.Parent.Skid
+	
+	
+	script.Parent.Parent.execute.MouseButton1Click:Connect(function()
+		print("Literally doesn't work at all, idk why you've came here.")
+		loadstring(Editor.Text)
+	end)
+end
+coroutine.wrap(CMPQSO_fake_script)()
+local function FAEP_fake_script() -- Clear.LocalScript 
+	local script = Instance.new('LocalScript', Clear)
+
+	local Editor = script.Parent.Parent.Editor
+	local Clear = script.Parent.Parent.Clear
+	
+	script.Parent.Parent.Clear.MouseButton1Click:Connect(function()
+		Editor.Text = "Cleared!"
+		wait(0.6)
+		Editor.Text = ""
+	end)
+	
+end
+coroutine.wrap(FAEP_fake_script)()
