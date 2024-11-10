@@ -1,4 +1,4 @@
---imagine skidding a useless script, could never be me 😭🙏
+--Made by apple
 
 local ScreenGui = Instance.new("ScreenGui")
 local Apple = Instance.new("Frame")
@@ -7,6 +7,7 @@ local Clear = Instance.new("TextButton")
 local Editor = Instance.new("TextBox")
 local TextLabel = Instance.new("TextLabel")
 local imagineskiddingauselessscript = Instance.new("Frame")
+local Inject = Instance.new("TextButton")
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -26,6 +27,7 @@ execute.BorderColor3 = Color3.fromRGB(0, 0, 0)
 execute.BorderSizePixel = 0
 execute.Position = UDim2.new(0.0332829207, 0, 0.866242349, 0)
 execute.Size = UDim2.new(0, 82, 0, 37)
+execute.Visible = false
 execute.Font = Enum.Font.FredokaOne
 execute.Text = "Execute"
 execute.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -38,6 +40,7 @@ Clear.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Clear.BorderSizePixel = 0
 Clear.Position = UDim2.new(0.181543127, 0, 0.86624217, 0)
 Clear.Size = UDim2.new(0, 94, 0, 37)
+Clear.Visible = false
 Clear.Font = Enum.Font.FredokaOne
 Clear.Text = "Clear"
 Clear.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -51,7 +54,7 @@ Editor.BorderSizePixel = 0
 Editor.Position = UDim2.new(0.0332829058, 0, 0.16831392, 0)
 Editor.Size = UDim2.new(0, 592, 0, 230)
 Editor.Font = Enum.Font.SourceSans
-Editor.Text = "print(\"I'll soon make this an actual executor lol\")"
+Editor.Text = "--I need to learn c++ before I can make this an actual executor, not a script."
 Editor.TextColor3 = Color3.fromRGB(255, 255, 255)
 Editor.TextSize = 16.000
 Editor.TextXAlignment = Enum.TextXAlignment.Left
@@ -75,7 +78,19 @@ imagineskiddingauselessscript.BorderColor3 = Color3.fromRGB(0, 0, 0)
 imagineskiddingauselessscript.BorderSizePixel = 0
 imagineskiddingauselessscript.Position = UDim2.new(0.0533049032, 0, 0.17412141, 0)
 
-local function CMPQSO_fake_script() -- execute.LocalScript 
+Inject.Name = "Inject"
+Inject.Parent = Apple
+Inject.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Inject.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Inject.BorderSizePixel = 0
+Inject.Position = UDim2.new(0.0332829691, 0, 0.866242349, 0)
+Inject.Size = UDim2.new(0, 592, 0, 37)
+Inject.Font = Enum.Font.FredokaOne
+Inject.Text = "Inject"
+Inject.TextColor3 = Color3.fromRGB(255, 255, 255)
+Inject.TextSize = 18.000
+
+local function OJSQA_fake_script()  
 	local script = Instance.new('LocalScript', execute)
 
 	local Execute = script.Parent.Parent.execute
@@ -84,12 +99,11 @@ local function CMPQSO_fake_script() -- execute.LocalScript
 	
 	
 	script.Parent.Parent.execute.MouseButton1Click:Connect(function()
-		print("Literally doesn't work at all, idk why you've came here.")
 		loadstring(Editor.Text)
 	end)
 end
-coroutine.wrap(CMPQSO_fake_script)()
-local function FAEP_fake_script() -- Clear.LocalScript 
+coroutine.wrap(OJSQA_fake_script)()
+local function FCAI_fake_script()  
 	local script = Instance.new('LocalScript', Clear)
 
 	local Editor = script.Parent.Parent.Editor
@@ -102,4 +116,24 @@ local function FAEP_fake_script() -- Clear.LocalScript
 	end)
 	
 end
-coroutine.wrap(FAEP_fake_script)()
+coroutine.wrap(FCAI_fake_script)()
+local function ENEY_fake_script() 
+	local script = Instance.new('LocalScript', Inject)
+
+	local injectbutton = script.Parent.Parent.Inject
+	local executebutton = script.Parent.Parent.execute
+	local clearbutton = script.Parent.Parent.Clear
+	local button = script.Parent.Parent.Inject
+	
+	local function inject ()
+		injectbutton.Visible = false
+		executebutton.Visible = true
+		clearbutton.Visible = true
+		print("Apple was injected, have fun scripting!")
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		inject()
+	end)
+end
+coroutine.wrap(ENEY_fake_script)()
